@@ -1,0 +1,19 @@
+{
+  "dataset": "D:\\MissionShield\\data\\processed\\missionshield_e0_v2_dataset.csv",
+  "split_file": "D:\\MissionShield\\results\\e1_v2_prefailure_run_split.json",
+  "history": 10,
+  "horizons": [
+    10,
+    30,
+    60
+  ],
+  "protocol": {
+    "current_state": "operational_only",
+    "history": "all_history_steps_pre_failure",
+    "forecast_window": "t+1_through_t+H",
+    "right_censoring": "excluded",
+    "label": "any_failure_within_complete_future_window",
+    "split_unit": "run",
+    "test_set": "held_out_frozen_runs"
+  }
+}

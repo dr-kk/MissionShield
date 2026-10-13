@@ -1,0 +1,2 @@
+model,horizon,held_out_family,seed,train_samples,train_positive,validation_samples,validation_positive,test_samples,test_positive,test_runs,best_epoch,validation_auprc,auprc,auroc,ece,brier,parameters,implementation
+MissionShield,30,ddos,101,11127,667,2160,158,543,40,5,1,0.8243104678465039,0.4659153336972874,0.8434890656063617,0.033714966110981195,0.053570427000522614,414530,E4-B frozen MissionShield

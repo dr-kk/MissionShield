@@ -1,0 +1,16 @@
+{
+  "source": "E20-D cohort",
+  "exploratory": true,
+  "fixed_clock": 60,
+  "random_range_inclusive": [
+    9,
+    129
+  ],
+  "random_seed_rule": "mission_seed + 7777777",
+  "detector_threshold": 0.5,
+  "detector_rule": "first rising crossing of max six-node detector_score at t>=9",
+  "target": "edge_processing",
+  "action": "restore_service",
+  "one_action_per_mission": true,
+  "note": "Not budget matched. Immediate t=0 is an idealized early-action upper-control; do not call it operationally feasible. Detector threshold not calibrated for matched FAR."
+}

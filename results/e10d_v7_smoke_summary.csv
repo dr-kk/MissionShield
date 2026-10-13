@@ -1,0 +1,3 @@
+condition,intervals,mean_latency_ms,mean_packet_loss,mean_utilization,mean_availability,mean_sensor_quality,final_mission_effectiveness,failure_intervals
+benign,12,31.01223720833333,0.0,0.0017836933333333332,1.0,1.0,1.0,0
+combined,12,160.37416524623015,0.2708333333333333,0.005713333333333333,0.7291666666666666,1.0,0.7625,3

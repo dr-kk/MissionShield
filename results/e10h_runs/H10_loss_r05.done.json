@@ -1,0 +1,10 @@
+{
+  "run_id": "H10_loss_r05",
+  "rows": 900,
+  "sha256": "6d196722fe47654be2ea3466f168a5eb4ad6c87091d000f88d2682f4782cc5df",
+  "complete": true,
+  "intervened": true,
+  "intervention_time": 40,
+  "target": "command",
+  "alarm_probability": 0.8682456999160284
+}

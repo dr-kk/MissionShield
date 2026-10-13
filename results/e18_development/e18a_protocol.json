@@ -1,0 +1,20 @@
+{
+  "experiment": "E18-A",
+  "role": "development diagnostic, not confirmation",
+  "base_seed": 2000042,
+  "runs_per_family": 12,
+  "offsets": [
+    0,
+    15,
+    30
+  ],
+  "targets": [
+    "edge_processing",
+    "fusion",
+    "command"
+  ],
+  "action": "sustained restore_service",
+  "cost": 0.25,
+  "simulations": "E0/E5B mechanisms unchanged",
+  "caveat": "Single stochastic scenario set; repeated intervention from t0 onward; no learned policy."
+}

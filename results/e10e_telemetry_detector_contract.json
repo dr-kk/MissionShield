@@ -1,0 +1,97 @@
+{
+  "stage": "E10-E",
+  "status": "FROZEN_BEFORE_NONBENIGN_EVALUATION",
+  "purpose": "Six-node telemetry mapping and benign-only detector calibration contract",
+  "inherits": {
+    "sampling_interval_s": 1.0,
+    "history": 10,
+    "tasks_per_interval": 8,
+    "mission_window_intervals": 10,
+    "mission_failure_threshold": 0.7,
+    "payload_tolerance_abs": 0.05,
+    "deadline_ms": 500,
+    "model_horizons": [
+      10,
+      30,
+      60
+    ],
+    "model_normalization": "original frozen E1 synthetic-training normalization",
+    "model_training_on_emulator": false
+  },
+  "node_order": [
+    "sensor",
+    "tactical_link",
+    "edge_processing",
+    "fusion",
+    "command",
+    "actuator"
+  ],
+  "feature_order": [
+    "latency",
+    "packet_loss",
+    "utilization",
+    "availability",
+    "sensor_quality",
+    "detector_score"
+  ],
+  "per_node_mapping": {
+    "latency": {
+      "definition": "mean cumulative application latency in ms from sensor task emission to receipt at that logical node during the interval",
+      "sensor": "0.0 ms at emission",
+      "missing_receipts": "excluded from latency mean; loss/availability capture missing tasks"
+    },
+    "packet_loss": {
+      "definition": "1 - (number of expected task IDs received at that node within the 500 ms deadline / 8)",
+      "sensor": "0.0 because all 8 task IDs are generated locally"
+    },
+    "utilization": {
+      "definition": "maximum over that node's active Mininet interfaces of interval byte-rate / configured interface capacity, clipped to [0,1]",
+      "reason": "deterministic node-level observable; avoids averaging away a congested interface"
+    },
+    "availability": {
+      "definition": "number of expected task IDs received at that node during the interval / 8",
+      "sensor": "1.0 when all 8 tasks are generated"
+    },
+    "sensor_quality": {
+      "definition": "fraction of task payloads present at that node whose value is within absolute tolerance 0.05 of deterministic evaluator ground truth",
+      "sensor": "fraction of generated payloads within tolerance",
+      "no_received_payloads": "0.0"
+    },
+    "detector_score": {
+      "definition": "benign-calibrated empirical tail anomaly score using only latency, packet_loss, utilization, availability",
+      "calibration_scope": "per node and per base feature using benign emulator calibration intervals only",
+      "tail_direction": {
+        "latency": "high",
+        "packet_loss": "high",
+        "utilization": "high",
+        "availability": "low"
+      },
+      "feature_tail_score": "For a value x, empirical one-sided tail score = count of benign calibration values at least as extreme as x divided by (n+1), with numerator using 1 + count; anomaly = 1 - tail_probability.",
+      "node_combination": "maximum anomaly across the four observable base features",
+      "range": "[0,1)",
+      "uses_labels": false,
+      "uses_attack_metadata": false,
+      "uses_mission_failure": false,
+      "uses_model_predictions": false
+    }
+  },
+  "benign_calibration": {
+    "condition": {
+      "bw_mbps": 20,
+      "delay_per_link_side": "2ms",
+      "loss_percent": 0
+    },
+    "runs": 5,
+    "intervals_per_run": 60,
+    "total_intervals_per_node": 300,
+    "preflight": "engineering-only and excluded",
+    "outcome_use": "calibration only; no attack/failure labels"
+  },
+  "integrity": [
+    "Do not change mapping after non-benign outcomes are observed.",
+    "Do not fit or fine-tune MissionShield on emulator data.",
+    "Do not replace original E1 normalization.",
+    "Do not select a horizon based on emulator outcomes; evaluate H10/H30/H60.",
+    "E10-D v7 remains a smoke validation and is not used to calibrate detector_score."
+  ]
+}

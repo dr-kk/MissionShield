@@ -1,0 +1,16 @@
+horizon,comparison,missions,missionshield_only_failures,control_only_failures,difference_pp_control_minus_ms,exact_mcnemar_p_unadjusted,ms_actions,control_actions
+10,MissionShield vs Detector rise 0.5,180,0,0,0.0,1.0,97,175
+10,MissionShield vs Fixed clock t=60,180,0,0,0.0,1.0,97,180
+10,MissionShield vs Immediate t=0,180,0,0,0.0,1.0,97,180
+10,MissionShield vs No action,180,1,12,6.111111111111112,0.00341796875,97,0
+10,MissionShield vs Random clock,180,0,1,0.5555555555555564,1.0,97,180
+30,MissionShield vs Detector rise 0.5,180,0,0,0.0,1.0,106,175
+30,MissionShield vs Fixed clock t=60,180,0,0,0.0,1.0,106,180
+30,MissionShield vs Immediate t=0,180,0,0,0.0,1.0,106,180
+30,MissionShield vs No action,180,1,12,6.111111111111112,0.00341796875,106,0
+30,MissionShield vs Random clock,180,0,1,0.5555555555555564,1.0,106,180
+60,MissionShield vs Detector rise 0.5,180,1,0,-0.5555555555555564,1.0,120,175
+60,MissionShield vs Fixed clock t=60,180,1,0,-0.5555555555555564,1.0,120,180
+60,MissionShield vs Immediate t=0,180,1,0,-0.5555555555555564,1.0,120,180
+60,MissionShield vs No action,180,1,11,5.555555555555555,0.00634765625,120,0
+60,MissionShield vs Random clock,180,1,1,0.0,1.0,120,180

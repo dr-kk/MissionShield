@@ -1,0 +1,10 @@
+{
+  "run_id": "H10_bandwidth_r01",
+  "rows": 900,
+  "sha256": "ca2d9cb1bbf097eecd4dc14422749fef36e625251764e5b9226db8b5a2546913",
+  "complete": true,
+  "intervened": true,
+  "intervention_time": 42,
+  "target": "fusion",
+  "alarm_probability": 0.7770877189267887
+}

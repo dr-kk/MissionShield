@@ -1,0 +1,10 @@
+{
+  "run_id": "H60_loss_r03",
+  "rows": 900,
+  "sha256": "8a78713fc0c2b837b0e06bf0604bf96748ab891811f8f3ffeb7490be751a1ad0",
+  "complete": true,
+  "intervened": true,
+  "intervention_time": 34,
+  "target": "edge_processing",
+  "alarm_probability": 0.05844540143887747
+}

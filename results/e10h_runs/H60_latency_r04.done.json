@@ -1,0 +1,10 @@
+{
+  "run_id": "H60_latency_r04",
+  "rows": 900,
+  "sha256": "500fd98c1efc250a25018bbeb652c5fddf97736a3e4162b60a49ad8dfc6e3c39",
+  "complete": true,
+  "intervened": true,
+  "intervention_time": 28,
+  "target": "edge_processing",
+  "alarm_probability": 0.06077059000572052
+}

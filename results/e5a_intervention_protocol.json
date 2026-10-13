@@ -1,0 +1,115 @@
+{
+  "protocol_version": "E5-A-v1",
+  "status": "FROZEN_AFTER_E5A",
+  "nodes": [
+    "sensor",
+    "tactical_link",
+    "edge_processing",
+    "fusion",
+    "command",
+    "actuator"
+  ],
+  "actions": [
+    {
+      "action_id": "A0",
+      "action": "no_action",
+      "target_scope": "none",
+      "cost": 0.0,
+      "description": "Continue mission operation without defensive intervention."
+    },
+    {
+      "action_id": "A1",
+      "action": "rate_limit",
+      "target_scope": "selected_path",
+      "cost": 0.1,
+      "description": "Throttle suspicious traffic while preserving connectivity."
+    },
+    {
+      "action_id": "A2",
+      "action": "reroute",
+      "target_scope": "selected_path",
+      "cost": 0.2,
+      "description": "Shift mission traffic away from a degraded or suspicious path."
+    },
+    {
+      "action_id": "A3",
+      "action": "isolate",
+      "target_scope": "selected_node",
+      "cost": 0.35,
+      "description": "Temporarily isolate a suspected compromised/degraded node."
+    },
+    {
+      "action_id": "A4",
+      "action": "restore_service",
+      "target_scope": "selected_node",
+      "cost": 0.25,
+      "description": "Restore/reinitialize a degraded service or processing component."
+    },
+    {
+      "action_id": "A5",
+      "action": "safe_mode",
+      "target_scope": "mission",
+      "cost": 0.3,
+      "description": "Enter degraded-safe operation to preserve essential mission functionality."
+    }
+  ],
+  "applicability": {
+    "A0": [
+      "sensor",
+      "tactical_link",
+      "edge_processing",
+      "fusion",
+      "command",
+      "actuator"
+    ],
+    "A1": [
+      "tactical_link"
+    ],
+    "A2": [
+      "tactical_link"
+    ],
+    "A3": [
+      "sensor",
+      "tactical_link",
+      "edge_processing",
+      "fusion",
+      "command"
+    ],
+    "A4": [
+      "edge_processing",
+      "fusion",
+      "command"
+    ],
+    "A5": [
+      "sensor",
+      "tactical_link",
+      "edge_processing",
+      "fusion",
+      "command",
+      "actuator"
+    ]
+  },
+  "metrics": [
+    "failure_prevented",
+    "post_intervention_failure",
+    "mission_effectiveness_before",
+    "mission_effectiveness_after",
+    "mission_effectiveness_gain",
+    "recovery_time_steps",
+    "intervention_cost"
+  ],
+  "planner_objective": {
+    "benefit_term": "mission_effectiveness_gain",
+    "failure_term": "failure_prevented",
+    "cost_term": "intervention_cost",
+    "cost_weight_selection": "validation_only",
+    "test_tuning_allowed": false
+  },
+  "scientific_constraints": [
+    "Do not change intervention definitions after observing E5-B test outcomes.",
+    "Do not choose intervention cost weights using test outcomes.",
+    "Use identical underlying scenario/run when comparing no-action and intervention counterfactuals.",
+    "Report intervention benefit together with intervention cost.",
+    "Preserve no-action counterfactual as the reference condition."
+  ]
+}

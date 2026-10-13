@@ -1,0 +1,34 @@
+{
+  "experiment": "E15-B0",
+  "attack_family": "service_degradation",
+  "horizon": 60,
+  "normalization": "sorted_training_timestamp_keys_float32",
+  "normalization_timestamp_count": 9355,
+  "test_samples": 405,
+  "X_shape": [
+    405,
+    10,
+    6,
+    6
+  ],
+  "positive_labels": 26,
+  "normalization_mean": [
+    27.37776756286621,
+    0.04192538186907768,
+    0.4400268793106079,
+    0.9590693712234497,
+    0.9220779538154602,
+    0.16942203044891357
+  ],
+  "normalization_std": [
+    9.506113052368164,
+    0.035716649144887924,
+    0.10433889180421829,
+    0.04030464217066765,
+    0.06275320053100586,
+    0.1253356635570526
+  ],
+  "X_sha256": "4f91214967bf075975b6617403d33fa64924ee7617aadcb2be931fa43cc66c84",
+  "y_sha256": "85b882a385eae8d8d96cf1138da8dbea0c3b3ee547d89cad6a245033ba220564",
+  "status": "deterministic_input_baseline"
+}

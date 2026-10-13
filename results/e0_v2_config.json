@@ -1,0 +1,45 @@
+{
+  "version": "E0-v2",
+  "seed": 42,
+  "nodes": [
+    "sensor",
+    "tactical_link",
+    "edge_processing",
+    "fusion",
+    "command",
+    "actuator"
+  ],
+  "attack_families": [
+    "benign",
+    "ddos",
+    "reconnaissance",
+    "spoofing",
+    "service_degradation",
+    "multi_stage"
+  ],
+  "runs_per_family": 30,
+  "steps_per_run": 150,
+  "mission_window": 10,
+  "mission_crit": 0.7,
+  "forecast_horizons": [
+    10,
+    30,
+    60
+  ],
+  "features": [
+    "latency",
+    "packet_loss",
+    "utilization",
+    "availability",
+    "sensor_quality",
+    "detector_score"
+  ],
+  "design": [
+    "overlapping attack/benign telemetry",
+    "benign workload disturbances",
+    "variable attack onset and severity",
+    "non-fatal attack runs",
+    "latent temporal degradation",
+    "dependency propagation"
+  ]
+}

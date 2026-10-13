@@ -1,0 +1,17 @@
+{
+  "source": "D:\\MissionShield\\results\\e20d_fresh",
+  "delays": [
+    0,
+    5,
+    10,
+    20
+  ],
+  "target": "edge_processing",
+  "action": "restore_service",
+  "policy": "frozen first alarm + fixed delay",
+  "independent_cohort": false,
+  "exploratory": true,
+  "failure_definition": "any failure over full mission timeline",
+  "too_late_definition": "action scheduled at/after first baseline failure, or outside timeline",
+  "note": "Replays are counterfactual simulator outputs; no online alarm recomputation after intervention."
+}

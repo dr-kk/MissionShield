@@ -1,0 +1,10 @@
+{
+  "run_id": "H60_combined_r03",
+  "rows": 900,
+  "sha256": "59ad933d75095588db14154928bd3a79bc8483e956437632e2b98f24e8d464a6",
+  "complete": true,
+  "intervened": true,
+  "intervention_time": 40,
+  "target": "edge_processing",
+  "alarm_probability": 0.1565382730590806
+}

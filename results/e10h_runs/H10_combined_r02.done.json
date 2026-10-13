@@ -1,0 +1,10 @@
+{
+  "run_id": "H10_combined_r02",
+  "rows": 900,
+  "sha256": "be0f4410f4b1dd6a9226e60a23e73c1deb9ad9c7cf417205cfddb83f55a5c6cd",
+  "complete": true,
+  "intervened": true,
+  "intervention_time": 23,
+  "target": "fusion",
+  "alarm_probability": 0.7868854766964908
+}

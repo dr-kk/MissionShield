@@ -1,0 +1,93 @@
+{
+  "experiment": "E10-C",
+  "status": "FROZEN_BEFORE_MODEL_INFERENCE",
+  "logical_nodes": [
+    "sensor",
+    "tactical_link",
+    "edge_processing",
+    "fusion",
+    "command",
+    "actuator"
+  ],
+  "sampling": {
+    "interval_seconds": 1.0,
+    "history_intervals": 10,
+    "tasks_per_interval": 8,
+    "mission_window_intervals": 10,
+    "mission_failure_threshold": 0.7
+  },
+  "application": {
+    "task_transport": "UDP application messages through six logical stages",
+    "task_id_required": true,
+    "ground_truth_signal": "deterministic sequence known to evaluator",
+    "payload_tolerance_abs": 0.05,
+    "deadline_ms": 500.0,
+    "success_definition": "actuator receives matching task_id, payload within tolerance, before deadline"
+  },
+  "features": {
+    "latency": {
+      "unit": "ms",
+      "definition": "application end-to-end latency for delivered tasks; interval mean"
+    },
+    "packet_loss": {
+      "range": [
+        0,
+        1
+      ],
+      "definition": "1 - on-time delivered task count / expected task count"
+    },
+    "utilization": {
+      "range": [
+        0,
+        1
+      ],
+      "definition": "measured interface bytes per second divided by configured link bytes per second, clipped to [0,1]"
+    },
+    "availability": {
+      "range": [
+        0,
+        1
+      ],
+      "definition": "successful application heartbeat/task receipts divided by expected receipts"
+    },
+    "sensor_quality": {
+      "range": [
+        0,
+        1
+      ],
+      "definition": "fraction of delivered sensor payloads within absolute tolerance of evaluator ground truth"
+    },
+    "detector_score": {
+      "range": [
+        0,
+        1
+      ],
+      "definition": "benign-calibrated anomaly score using observable latency, packet_loss, utilization, availability only",
+      "calibration": "benign emulator calibration runs only",
+      "evaluation_outcomes_used": false
+    }
+  },
+  "mission_outcome": {
+    "mission_effectiveness": "successful tasks / expected tasks over rolling 10-interval window",
+    "failure": "mission_effectiveness < 0.70",
+    "independent_of_missionshield_prediction": true,
+    "independent_of_detector_score": true
+  },
+  "model_transfer": {
+    "checkpoint": "original frozen E1 MissionShield checkpoint",
+    "training_on_emulator_data": false,
+    "fine_tuning_on_emulator_data": false,
+    "synthetic_training_normalization_retained": true,
+    "horizons_to_evaluate": [
+      10,
+      30,
+      60
+    ],
+    "reason": "avoid post-hoc selection of a single horizon"
+  },
+  "integrity": {
+    "e10b_impairment_levels_changed_after_results": false,
+    "feature_mapping_tuned_on_missionshield_predictions": false,
+    "mission_threshold_tuned_on_model_predictions": false
+  }
+}

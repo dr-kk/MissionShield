@@ -1,0 +1,12 @@
+{
+  "cohort": "E20-D frozen 180 missions",
+  "fixed_clock": 60,
+  "target": "edge_processing",
+  "action": "restore_service",
+  "randomizations": 1000,
+  "seed": 20261013,
+  "assignment": "Uniformly choose exactly k distinct mission IDs, blinded to labels, for each repetition",
+  "comparison": "Model natural-alarm outcomes vs randomized fixed-clock subsets at same action count",
+  "inference": "Exploratory randomization distribution; 2.5%-97.5% are policy-assignment quantiles, not model uncertainty CIs",
+  "restoration_strength": "Not varied in this script; requires simulator source to change operator correctly."
+}

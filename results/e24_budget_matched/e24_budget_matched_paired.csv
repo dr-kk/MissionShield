@@ -1,0 +1,13 @@
+horizon,model,mean_model_only_failures_b,mean_clock_only_failures_c,fraction_exact_mcnemar_p_lt_005
+10,MissionShield,0.484,5.531,0.318
+10,GraphTemporal,0.519,6.305,0.446
+10,LSTM,0.492,5.873,0.385
+10,Transformer,0.442,5.293,0.29
+30,MissionShield,0.398,4.961,0.245
+30,GraphTemporal,0.463,5.565,0.341
+30,LSTM,0.343,4.265,0.14
+30,Transformer,0.0,6.465,0.702
+60,MissionShield,1.001,3.652,0.033
+60,GraphTemporal,0.347,4.06,0.123
+60,LSTM,0.0,6.416,0.688
+60,Transformer,0.0,5.676,0.538

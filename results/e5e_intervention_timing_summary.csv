@@ -1,0 +1,7 @@
+horizon,outcome,baseline_failing_runs,triggered_runs,median_lead_to_failure,mean_lead_to_failure,min_lead_to_failure,max_lead_to_failure,median_delay_from_attack_onset,mean_delay_from_attack_onset
+10,prevented,2,2,46.0,46.0,11.0,81.0,31.0,31.0
+10,not_prevented,7,7,32.0,37.142857142857146,20.0,61.0,26.0,25.142857142857142
+30,prevented,2,2,49.5,49.5,18.0,81.0,27.5,27.5
+30,not_prevented,7,7,37.0,41.857142857142854,22.0,66.0,17.0,20.428571428571427
+60,prevented,2,2,45.0,45.0,20.0,70.0,32.0,32.0
+60,not_prevented,7,7,43.0,52.57142857142857,27.0,78.0,8.0,9.714285714285714

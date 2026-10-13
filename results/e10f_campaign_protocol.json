@@ -1,0 +1,91 @@
+{
+  "stage": "E10-F",
+  "status": "FROZEN_BEFORE_EMULATOR_OUTCOMES",
+  "purpose": "Onset-based Mininet zero-shot MissionShield evaluation campaign",
+  "inherits": {
+    "e10c_application_contract": "results/e10c_feature_contract.json",
+    "e10e_telemetry_contract": "results/e10e_telemetry_detector_contract.json",
+    "e10e_detector_calibration": "results/e10e_detector_calibration.json",
+    "detector_calibration_raw_sha256": "d422d318b6f0a1dcfddee240cb7edfed35ca4b8dfdd5ad3ffbefba78ebdf0e2e"
+  },
+  "campaign": {
+    "conditions": {
+      "latency": {
+        "bw_mbps": 20,
+        "delay_per_link_side": "15ms",
+        "loss_percent": 0
+      },
+      "loss": {
+        "bw_mbps": 20,
+        "delay_per_link_side": "2ms",
+        "loss_percent": 5
+      },
+      "bandwidth": {
+        "bw_mbps": 5,
+        "delay_per_link_side": "2ms",
+        "loss_percent": 0
+      },
+      "combined": {
+        "bw_mbps": 5,
+        "delay_per_link_side": "15ms",
+        "loss_percent": 5
+      }
+    },
+    "runs_per_condition": 5,
+    "total_runs": 20,
+    "intervals_per_run": 150,
+    "sampling_interval_s": 1.0,
+    "tasks_per_interval": 8,
+    "impairment_onset_interval": 40,
+    "pre_onset_intervals": 40,
+    "post_onset_intervals": 110,
+    "pre_onset_condition": {
+      "bw_mbps": 20,
+      "delay_per_link_side": "2ms",
+      "loss_percent": 0
+    },
+    "preflight": "benign engineering-only; excluded from telemetry and outcomes"
+  },
+  "mission": {
+    "deadline_ms": 500,
+    "payload_tolerance_abs": 0.05,
+    "mission_window_intervals": 10,
+    "failure_threshold": 0.7,
+    "failure_rule": "mission_effectiveness < 0.70"
+  },
+  "forecast_evaluation": {
+    "history": 10,
+    "horizons": [
+      10,
+      30,
+      60
+    ],
+    "sample_rule": "history i-9..i must be failure-free; full future i+1..i+H must exist; label is any mission failure in exactly that future window",
+    "model": "original frozen E1 MissionShield checkpoint for each horizon",
+    "normalization": "original frozen E1 synthetic-training normalization",
+    "retraining_or_finetuning": false,
+    "thresholds": "use previously frozen E3-B calibration/operating thresholds where operational alarm metrics are reported",
+    "report": [
+      "AUROC",
+      "AUPRC",
+      "ECE",
+      "Brier",
+      "fixed-FAR sensitivity",
+      "event detection",
+      "lead time where defined"
+    ]
+  },
+  "scope": {
+    "primary": "zero-shot forecasting transfer from synthetic training to real Mininet telemetry",
+    "intervention": "not part of initial E10-F forecasting campaign; evaluate only after forecasting telemetry/inference is frozen"
+  },
+  "integrity": [
+    "All four non-benign conditions are retained regardless of whether they generate mission failures.",
+    "No severity is changed after outcomes.",
+    "No horizon is selected post hoc; H10/H30/H60 are all reported.",
+    "No emulator data are used to train or fine-tune MissionShield.",
+    "No attack/failure labels are used in detector_score calibration.",
+    "E10-D v7 smoke outcomes are not used for model or detector tuning.",
+    "If a condition produces zero positive forecast labels, report that fact and false-alarm behavior rather than manufacturing positives."
+  ]
+}

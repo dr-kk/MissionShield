@@ -1,0 +1,10 @@
+{
+  "run_id": "H60_bandwidth_r01",
+  "rows": 900,
+  "sha256": "eb2625b502b3fc05456ec81959140c14770dc9470d30785916cd096316bccb0b",
+  "complete": true,
+  "intervened": true,
+  "intervention_time": 36,
+  "target": "edge_processing",
+  "alarm_probability": 0.056810652335579186
+}

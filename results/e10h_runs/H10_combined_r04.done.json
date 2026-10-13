@@ -1,0 +1,10 @@
+{
+  "run_id": "H10_combined_r04",
+  "rows": 900,
+  "sha256": "6695f2872f6aa1dbcac94c343b8a7fff90fceb7fa4580418813ea91902151d71",
+  "complete": true,
+  "intervened": true,
+  "intervention_time": 13,
+  "target": "command",
+  "alarm_probability": 0.7746658685302945
+}

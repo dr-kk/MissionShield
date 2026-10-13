@@ -1,0 +1,19 @@
+{
+  "source": "e20d_fresh/e20d_actions.csv",
+  "design": "retrospective synchronous-batch allocation using frozen first alarms",
+  "budgets": [
+    40,
+    60,
+    80
+  ],
+  "tie_break": "sha256(e20e-fixed-tie-v1|run_id)",
+  "selection": "earliest alarm time, deterministic hash tie-break; outcome-blind",
+  "counterfactual": "E20-D fixed-edge replay for selected alarms; baseline otherwise",
+  "limitations": [
+    "Same 180 missions reused for horizons and budgets",
+    "Not a deployable streaming/global scheduling simulation",
+    "Alarm-based prioritization can favor earlier, not necessarily better, warnings",
+    "Holm adjustment covers only 3 comparators within each horizon/budget",
+    "Exploratory follow-up to already inspected E20-D outcomes"
+  ]
+}

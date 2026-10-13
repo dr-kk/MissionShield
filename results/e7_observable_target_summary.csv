@@ -1,0 +1,10 @@
+horizon,observable_target,triggered_runs,baseline_failures,failures_prevented,failures_induced,mean_effectiveness_gain
+10,command,5,4,0,0,0.01164999999999996
+10,edge_processing,5,3,1,0,0.01173333333333324
+10,fusion,4,2,0,0,0.0071458333333333235
+30,command,4,3,1,0,0.011708333333333237
+30,edge_processing,9,6,2,0,0.01783333333333333
+30,fusion,1,0,0,0,-0.0008333333333333526
+60,command,10,4,0,0,0.002975000000000039
+60,edge_processing,6,3,0,0,0.013194444444444417
+60,fusion,3,2,0,0,0.003555555555555534

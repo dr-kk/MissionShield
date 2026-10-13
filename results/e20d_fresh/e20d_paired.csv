@@ -1,0 +1,10 @@
+horizon,comparison,missions,missionshield_only_failures,comparator_only_failures,exact_mcnemar_p_unadjusted,failure_advantage_pp,action_budget_difference
+10,MissionShield vs GraphTemporal,180,0,0,1.0,0.0,11
+10,MissionShield vs LSTM,180,0,0,1.0,0.0,6
+10,MissionShield vs Transformer,180,0,0,1.0,0.0,-4
+30,MissionShield vs GraphTemporal,180,0,0,1.0,0.0,11
+30,MissionShield vs LSTM,180,0,0,1.0,0.0,-11
+30,MissionShield vs Transformer,180,1,0,1.0,-0.5555555555555536,14
+60,MissionShield vs GraphTemporal,180,1,0,1.0,-0.5555555555555564,0
+60,MissionShield vs LSTM,180,2,0,0.5,-1.1111111111111098,28
+60,MissionShield vs Transformer,180,2,0,0.5,-1.1111111111111098,16

@@ -1,0 +1,4 @@
+horizon,test_runs,triggered_runs,baseline_failures,post_policy_failures,failures_prevented,failures_induced,failure_rate_before,failure_rate_after,net_failure_rate_reduction,prevention_rate_among_baseline_failures,mean_mission_effectiveness_gain,mean_incurred_cost
+10,30,14,9,8,1,0,0.3,0.26666666666666666,0.033333333333333326,0.1111111111111111,0.004849999999999977,0.11666666666666667
+30,30,14,9,6,3,0,0.3,0.2,0.09999999999999998,0.3333333333333333,0.0068833333333333194,0.11666666666666667
+60,30,19,9,9,0,0,0.3,0.3,0.0,0.0,0.0039861111111111165,0.15833333333333333

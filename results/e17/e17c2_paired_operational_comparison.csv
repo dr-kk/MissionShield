@@ -1,0 +1,10 @@
+competitor,metric,mean_difference,median_difference,missionShield_higher,missionShield_lower,ties,pairs
+graphwave,positive_window_recall,-0.03750537220731867,-0.04295339696799552,24,54,12,90
+graphwave,false_alerts_per_100_negative_windows,-1.9883634951321407,-2.5124843945068664,32,56,2,90
+graphwave,event_detection_rate,-0.016666666666666666,0.0,12,15,63,90
+lstm,positive_window_recall,0.06782642472423495,0.13156934306569346,52,31,7,90
+lstm,false_alerts_per_100_negative_windows,-1.9187432581705495,0.925925925925926,49,37,4,90
+lstm,event_detection_rate,0.11416666666666667,0.0,32,16,42,90
+patch,positive_window_recall,-0.00961812023247546,0.0,44,39,7,90
+patch,false_alerts_per_100_negative_windows,-4.0620729036044,0.0,44,44,2,90
+patch,event_detection_rate,-0.018333333333333326,0.0,23,21,46,90

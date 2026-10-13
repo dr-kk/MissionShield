@@ -1,0 +1,93 @@
+{
+  "seed_base": 4200042,
+  "missions_per_family": 30,
+  "horizons": [
+    10,
+    30,
+    60
+  ],
+  "models": [
+    "MissionShield",
+    "GraphTemporal",
+    "LSTM",
+    "Transformer"
+  ],
+  "action": "restore_service",
+  "target": "edge_processing",
+  "policy": "first frozen-threshold alarm; at most one intervention per mission",
+  "checkpoints": {
+    "MissionShield_H10": {
+      "checkpoint": "checkpoints\\e1_missionshield_H10.pt",
+      "sha256": "a492d8a3b697f0257c26c369deb651aec8df1b8dfe3c624d659d3fb41a6be3f6",
+      "temperature": 1.6265401888659723,
+      "threshold": 0.5459566389426778
+    },
+    "GraphTemporal_H10": {
+      "checkpoint": "checkpoints\\e2_frozen_graphtemporal_H10.pt",
+      "sha256": "428da45956479165f201ea2006d4118e635d74707cbcfaec379256906ae51c20",
+      "temperature": 1.708648412331094,
+      "threshold": 0.4971086401176467
+    },
+    "LSTM_H10": {
+      "checkpoint": "checkpoints\\e2_frozen_lstm_H10.pt",
+      "sha256": "c9a4541559d4d070e997072fd2e9aaa29e2df1943d04de259555b77b8aad3523",
+      "temperature": 2.140825544892168,
+      "threshold": 0.0186607263701689
+    },
+    "Transformer_H10": {
+      "checkpoint": "checkpoints\\e2_frozen_transformer_H10.pt",
+      "sha256": "511bd532cff3cb5898855441f71d4394567b5854d0fa0c8cb339655cb7e377f1",
+      "temperature": 2.269745728682285,
+      "threshold": 0.0123518197103225
+    },
+    "MissionShield_H30": {
+      "checkpoint": "checkpoints\\e1_missionshield_H30.pt",
+      "sha256": "afc59af22b1d4f6641448131e22f885d97722b404d26b86e67076f9be8c7f1ef",
+      "temperature": 0.9477993526352562,
+      "threshold": 0.7275325541980355
+    },
+    "GraphTemporal_H30": {
+      "checkpoint": "checkpoints\\e2_frozen_graphtemporal_H30.pt",
+      "sha256": "e35927443433f46519a2c3000f82061e3d6c596d5fb9fe9434515d1f1ecf1ec5",
+      "temperature": 0.8085203241248167,
+      "threshold": 0.224869065124737
+    },
+    "LSTM_H30": {
+      "checkpoint": "checkpoints\\e2_frozen_lstm_H30.pt",
+      "sha256": "fc36196bcee95b8f7dd925965e5e87b1fac33774d54cb8f510eeffdcedc8326d",
+      "temperature": 1.996102238765008,
+      "threshold": 0.0547775725401713
+    },
+    "Transformer_H30": {
+      "checkpoint": "checkpoints\\e2_frozen_transformer_H30.pt",
+      "sha256": "7a3c8e32ca059a77c6a2223aa4e853506aeeaadde0513bcef70aa2c8fdaaeca3",
+      "temperature": 1.8195914967076765,
+      "threshold": 0.0762476788646604
+    },
+    "MissionShield_H60": {
+      "checkpoint": "checkpoints\\e1_missionshield_H60.pt",
+      "sha256": "c2acb20b9ce3acb9e908e98acca575f4068f37d81fe4af419e83142371828a5b",
+      "temperature": 0.4384622545096639,
+      "threshold": 0.4947114739592888
+    },
+    "GraphTemporal_H60": {
+      "checkpoint": "checkpoints\\e2_frozen_graphtemporal_H60.pt",
+      "sha256": "55528d17b3979bf60a9532095656d146467cea581d00ce82c34d45cd44cb764f",
+      "temperature": 0.3762414270063284,
+      "threshold": 0.3301871358791994
+    },
+    "LSTM_H60": {
+      "checkpoint": "checkpoints\\e2_frozen_lstm_H60.pt",
+      "sha256": "49f0fcc2c645cfb6cb78dcfcf6481031db58e406c744550924a6f3bd48ce53ab",
+      "temperature": 0.5397740016132874,
+      "threshold": 0.6678152618667833
+    },
+    "Transformer_H60": {
+      "checkpoint": "checkpoints\\e2_frozen_transformer_H60.pt",
+      "sha256": "71675f25449d3deb79cc08a9d159239a977b947a566b588122797bd6239f81d8",
+      "temperature": 0.5430131054130576,
+      "threshold": 0.52044146075674
+    }
+  },
+  "note": "Natural policy comparison; different alarm counts mean action budgets are NOT matched. E8 cohort is not reused."
+}

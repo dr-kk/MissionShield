@@ -1,0 +1,10 @@
+{
+  "run_id": "H10_latency_r01",
+  "rows": 900,
+  "sha256": "b0bbce098ca3b8112b42dd279f6ef5650c3838f51793e396ef890f1d2c831110",
+  "complete": true,
+  "intervened": true,
+  "intervention_time": 9,
+  "target": "fusion",
+  "alarm_probability": 0.8222680691383505
+}

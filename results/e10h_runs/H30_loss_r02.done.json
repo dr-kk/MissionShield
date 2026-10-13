@@ -1,0 +1,10 @@
+{
+  "run_id": "H30_loss_r02",
+  "rows": 900,
+  "sha256": "9e38855d8d68ef55765584340239e94454b86205f8edf820e389cabc1c0ae062",
+  "complete": true,
+  "intervened": true,
+  "intervention_time": 13,
+  "target": "command",
+  "alarm_probability": 0.058023774942988646
+}

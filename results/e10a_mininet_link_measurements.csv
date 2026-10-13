@@ -1,0 +1,6 @@
+src,dst,latency_ms,packet_loss,throughput_mbps
+sensor,tactical_link,8.951,0.0,18.6599630602313
+tactical_link,edge_processing,8.935,0.0,18.651193705965063
+edge_processing,fusion,9.034,0.0,18.520498683700403
+fusion,command,8.99,0.0,18.6500588344874
+command,actuator,9.028,0.0,18.650373092761598

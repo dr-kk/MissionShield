@@ -1,0 +1,7 @@
+action_id,action,target_scope,cost,description,applicable_nodes
+A0,no_action,none,0.0,Continue mission operation without defensive intervention.,"sensor,tactical_link,edge_processing,fusion,command,actuator"
+A1,rate_limit,selected_path,0.1,Throttle suspicious traffic while preserving connectivity.,tactical_link
+A2,reroute,selected_path,0.2,Shift mission traffic away from a degraded or suspicious path.,tactical_link
+A3,isolate,selected_node,0.35,Temporarily isolate a suspected compromised/degraded node.,"sensor,tactical_link,edge_processing,fusion,command"
+A4,restore_service,selected_node,0.25,Restore/reinitialize a degraded service or processing component.,"edge_processing,fusion,command"
+A5,safe_mode,mission,0.3,Enter degraded-safe operation to preserve essential mission functionality.,"sensor,tactical_link,edge_processing,fusion,command,actuator"

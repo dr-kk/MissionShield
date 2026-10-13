@@ -1,0 +1,24 @@
+{
+  "cohort": "frozen E20-D 180 missions",
+  "model": "MissionShield",
+  "horizons": [
+    10,
+    30,
+    60
+  ],
+  "target": "edge_processing",
+  "action": "restore_service",
+  "multipliers": [
+    0.45,
+    0.7,
+    0.9
+  ],
+  "duration_steps": [
+    "persistent",
+    20
+  ],
+  "cost_note": "Action costs are not recomputed; duration-dependent cost model not specified",
+  "control": "0.45 persistent must reproduce original E20-D mission outcomes and E8 replay exactly",
+  "exploratory": true,
+  "no_model_retraining": true
+}

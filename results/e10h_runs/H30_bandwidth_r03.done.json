@@ -1,0 +1,10 @@
+{
+  "run_id": "H30_bandwidth_r03",
+  "rows": 900,
+  "sha256": "340c39ff72902812219bcd3b9afd9448baef62987c26da15c954bf193735575e",
+  "complete": true,
+  "intervened": true,
+  "intervention_time": 43,
+  "target": "command",
+  "alarm_probability": 0.05162697016977421
+}

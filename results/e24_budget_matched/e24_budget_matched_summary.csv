@@ -1,0 +1,13 @@
+horizon,model,missions,budget_actions,model_post_failures,clock_mean_post_failures,clock_p025_post_failures,clock_p975_post_failures,clock_prob_fewer_failures,clock_prob_equal_failures,clock_prob_more_failures,mean_clock_minus_model_failures
+10,MissionShield,180,97,33,38.047,35.0,41.0,0.001,0.001,0.998,5.047
+10,GraphTemporal,180,86,33,38.786,36.0,42.0,0.0,0.0,1.0,5.786
+10,LSTM,180,91,33,38.381,35.0,42.0,0.0,0.004,0.996,5.381
+10,Transformer,180,101,33,37.851,35.0,41.0,0.0,0.005,0.995,4.851
+30,MissionShield,180,106,33,37.563,34.0,41.0,0.0,0.01,0.99,4.563
+30,GraphTemporal,180,95,33,38.102,35.0,41.0,0.0,0.006,0.994,5.102
+30,LSTM,180,117,33,36.922,34.0,40.0,0.001,0.015,0.984,3.922
+30,Transformer,180,92,32,38.465,35.0,42.0,0.0,0.0,1.0,6.465
+60,MissionShield,180,120,34,36.651,34.0,40.0,0.02,0.07,0.91,2.651
+60,GraphTemporal,180,120,33,36.713,34.0,40.0,0.002,0.022,0.976,3.713
+60,LSTM,180,92,32,38.416,35.0,42.0,0.0,0.0,1.0,6.416
+60,Transformer,180,104,32,37.676,34.975,41.0,0.0,0.0,1.0,5.676

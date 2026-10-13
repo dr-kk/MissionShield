@@ -1,0 +1,4 @@
+horizon,failing_runs,triggered_failing_runs,prevented,median_trigger_lead,mean_trigger_lead,median_trigger_delay,mean_trigger_delay
+10,9,9,2,32.0,39.111111111111114,26.0,26.444444444444443
+30,9,9,2,37.0,43.55555555555556,19.0,22.0
+60,9,9,2,43.0,50.888888888888886,11.0,14.666666666666666

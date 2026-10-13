@@ -1,0 +1,10 @@
+{
+  "run_id": "H60_latency_r01",
+  "rows": 900,
+  "sha256": "ce8288afb3df46c2ec6da864e756744ca610d0760a400204b8dc431ecb3103cf",
+  "complete": true,
+  "intervened": false,
+  "intervention_time": null,
+  "target": null,
+  "alarm_probability": null
+}

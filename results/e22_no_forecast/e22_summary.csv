@@ -1,0 +1,6 @@
+policy,missions,actions,baseline_failures,post_failures,prevented,induced,mean_gain,mean_cost
+Detector rise 0.5,180,175,44,33,12,1,0.009670370370370378,0.24305555555555555
+Fixed clock t=60,180,180,44,33,12,1,0.009499074074074085,0.25
+Immediate t=0,180,180,44,33,12,1,0.008359246399176954,0.25
+No action,180,0,44,44,0,0,0.0,0.0
+Random clock,180,180,44,34,11,1,0.007514351851851862,0.25
